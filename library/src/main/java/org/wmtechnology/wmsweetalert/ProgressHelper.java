@@ -1,4 +1,4 @@
-package us.wmtechnology.wmsweetalert;
+package org.wmtechnology.wmsweetalert;
 
 import android.content.Context;
 

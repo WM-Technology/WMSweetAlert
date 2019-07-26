@@ -1,18 +1,15 @@
-package us.wmtechnology.wmsweetalert;
-
+package org.wmtechnology.wmsweetalert;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.Transformation;
@@ -22,7 +19,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.pnikosis.materialishprogress.ProgressWheel;
-import java.util.List;
 
 public class WMSweetAlertDialog extends Dialog implements View.OnClickListener {
     private View mDialogView;
@@ -106,18 +102,6 @@ public class WMSweetAlertDialog extends Dialog implements View.OnClickListener {
         mErrorXInAnim = (AnimationSet) OptAnimationLoader.loadAnimation(getContext(), R.anim.error_x_in);
         // 2.3.x system don't support alpha-animation on layer-list drawable
         // remove it from animation set
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.GINGERBREAD_MR1) {
-            List<Animation> childAnims = mErrorXInAnim.getAnimations();
-            int idx = 0;
-            for (; idx < childAnims.size(); idx++) {
-                if (childAnims.get(idx) instanceof AlphaAnimation) {
-                    break;
-                }
-            }
-            if (idx < childAnims.size()) {
-                childAnims.remove(idx);
-            }
-        }
         mSuccessBowAnim = OptAnimationLoader.loadAnimation(getContext(), R.anim.success_bow_roate);
         mSuccessLayoutAnimSet = (AnimationSet) OptAnimationLoader.loadAnimation(getContext(), R.anim.success_mask_layout);
         mModalInAnim = (AnimationSet) OptAnimationLoader.loadAnimation(getContext(), R.anim.modal_in);
@@ -431,7 +415,31 @@ public class WMSweetAlertDialog extends Dialog implements View.OnClickListener {
      * @return this
      */
     public WMSweetAlertDialog setDialogSize(ViewGroup.LayoutParams params) {
-        dialogLayout.setLayoutParams(params);
+        if(dialogLayout != null) {
+            ViewGroup.LayoutParams mparams = dialogLayout.getLayoutParams();
+            mparams.height = params.height;
+            mparams.width = params.width;
+        }
+        return this;
+    }
+
+    public WMSweetAlertDialog setDialogPadding(int left, int top, int right, int bottom) {
+        if (dialogLayout != null) {
+            if (left <= 0) {
+                left = dialogLayout.getPaddingLeft();
+            }
+            if (top <= 0) {
+                top = dialogLayout.getPaddingTop();
+            }
+            if (right <= 0) {
+                right = dialogLayout.getPaddingRight();
+            }
+            if (bottom <= 0) {
+                bottom = dialogLayout.getPaddingBottom();
+            }
+
+            dialogLayout.setPadding(left, top, right, bottom);
+        }
         return this;
     }
 

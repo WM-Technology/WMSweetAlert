@@ -1,4 +1,4 @@
-package us.wmtechnology.wmsweetalert;
+package org.wmtechnology.wmsweetalert;
 
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
