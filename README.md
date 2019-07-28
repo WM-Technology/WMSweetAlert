@@ -49,7 +49,7 @@ The simplest way to use WMSweetAlertDialog is to add the library as aar dependen
 
 show material progress
 
-    WMSweetAlertDialog pDialog = new WMWMSweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
+    WMSweetAlertDialog pDialog = new WMSweetAlertDialog(this, SweetAlertDialog.PROGRESS_TYPE);
     pDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));
     pDialog.setTitleText("Loading");
     pDialog.setCancelable(false);
