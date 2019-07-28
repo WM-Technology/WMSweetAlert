@@ -10,7 +10,7 @@
         android:toAlpha="1"
         android:duration="400"/>
 
-    <sweet:us.wmtechnology.wmsweetalert.Rotate3dAnimation
+    <sweet:org.wmtechnology.wmsweetalert.Rotate3dAnimation
         sweet:rollType="x"
         sweet:fromDeg="100"
         sweet:toDeg="0"

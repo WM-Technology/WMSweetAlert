@@ -25,7 +25,7 @@ dependencies {
 }
 
 
-
+/*
 install {
     repositories.mavenInstaller {
         pom {
@@ -61,7 +61,7 @@ install {
         }
     }
 }
-
+*/
 version = '1.0'
 
 if (project.hasProperty("android")) {
@@ -93,7 +93,7 @@ artifacts {
     archives sourcesJar
 }
 
-//apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
 /* upload command:
     gradlew -p library clean build uploadArchives --info
  */
