@@ -26,7 +26,24 @@ Inspired by JavaScript [SweetAlert](http://tristanedwards.me/sweetalert)
 ## Setup
 The simplest way to use WMSweetAlertDialog is to add the library as aar dependency to your build.
 
+**Maven**
 
+    <dependency>
+      <groupId>org.wmtechnology.wmsweetalert</groupId>
+      <artifactId>library</artifactId>
+      <version>1.1.3</version>
+      <type>aar</type>
+    </dependency>
+
+**Gradle**
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        compile 'org.wmtechnology.wmsweetalert:library:1.1.3'
+    }
 
 ## Usage
 
@@ -173,7 +190,6 @@ Disable button
         })
         .show();
 
-[more android tech shares: pedant.cn](http://www.pedant.cn)
 
 ## License
 
