@@ -31,7 +31,7 @@ The simplest way to use WMSweetAlertDialog is to add the library as aar dependen
     <dependency>
       <groupId>org.wmtechnology.wmsweetalert</groupId>
       <artifactId>library</artifactId>
-      <version>1.1.3</version>
+      <version>1.2.0</version>
       <type>aar</type>
     </dependency>
 
@@ -42,7 +42,7 @@ The simplest way to use WMSweetAlertDialog is to add the library as aar dependen
     }
 
     dependencies {
-        implementation 'org.wmtechnology.wmsweetalert:library:1.1.3'
+        implementation 'org.wmtechnology.wmsweetalert:library:1.2.0'
     }
 
 ## Usage
