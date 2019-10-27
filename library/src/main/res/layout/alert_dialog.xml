@@ -5,7 +5,8 @@
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
     android:background="?attr/sweet_alert_bg_drawable"
-    android:layoutDirection="ltr">
+    android:layoutDirection="ltr"
+    tools:targetApi="jelly_bean_mr1">
 
     <LinearLayout
         android:id="@+id/loading"
@@ -77,6 +78,7 @@
                 android:layout_height="60dp"
                 android:layout_gravity="start"
                 android:layout_marginStart="-3dp"
+                android:layout_marginLeft="-3dp"
                 android:background="@android:color/transparent" />
 
             <View
@@ -182,6 +184,7 @@
                 android:id="@+id/cancel_button"
                 style="@style/dialog_blue_button"
                 android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
                 android:background="@drawable/red_button_background"
                 android:visibility="gone"
                 tools:text="cancel"
@@ -190,8 +193,10 @@
             <Button
                 android:id="@+id/neutral_button"
                 style="@style/dialog_blue_button"
+                android:layout_marginLeft="-10dp"
                 android:layout_marginStart="-10dp"
                 android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/gray_button_background"
                 android:visibility="gone"
                 tools:text="neutral"

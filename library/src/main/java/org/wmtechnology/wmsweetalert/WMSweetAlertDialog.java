@@ -1,6 +1,5 @@
 package org.wmtechnology.wmsweetalert;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
@@ -18,9 +17,10 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import androidx.appcompat.app.AlertDialog;
 import com.pnikosis.materialishprogress.ProgressWheel;
 
-public class WMSweetAlertDialog extends Dialog implements View.OnClickListener {
+public class WMSweetAlertDialog extends AlertDialog implements View.OnClickListener {
     private View mDialogView;
     private AnimationSet mModalInAnim;
     private AnimationSet mModalOutAnim;
